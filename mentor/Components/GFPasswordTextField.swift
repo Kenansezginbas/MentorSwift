@@ -1,13 +1,13 @@
 //
-//  GFTextField.swift
+//  GFPasswordTextField.swift
 //  mentor
 //
-//  Created by Kenan Sezginbas on 26.12.2022.
+//  Created by Kenan Sezginbas on 28.12.2022.
 //
 
 import UIKit
 
-class GFTextField: UITextField {
+class GFPasswordTextField: UITextField {
 
     /*
     // Only override draw() if you perform custom drawing.
