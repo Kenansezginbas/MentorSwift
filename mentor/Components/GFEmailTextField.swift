@@ -1,5 +1,5 @@
 //
-//  GFTextField.swift
+//  GFEmailTextField.swift
 //  mentor
 //
 //  Created by Kenan Sezginbas on 26.12.2022.
@@ -24,15 +24,14 @@ class GFEmailTextField: UITextField {
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius                        = 10
         layer.borderWidth                         = 2
-        layer.borderColor                         = UIColor.systemGray4.cgColor
-        
+        layer.borderColor                         = UIColor.systemGray4.cgColor    
         textColor                                 = .label
         tintColor                                 = .label
         textAlignment                             = .center
         font                                      = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontSizeToFitWidth                 = true
         minimumFontSize                           = 10
-        
+        keyboardType                              = .emailAddress
         backgroundColor                           = .tertiarySystemBackground
         autocorrectionType                        = .no
         placeholder                               = "Enter a Username"
