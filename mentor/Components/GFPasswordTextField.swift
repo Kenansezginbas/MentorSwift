@@ -3,7 +3,7 @@
 //  mentor
 //
 //  Created by Kenan Sezginbas on 26.12.2022.
-//
+////
 
 
 import UIKit
@@ -22,7 +22,7 @@ class GFPasswordTextField: UITextField {
     
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius                        = 12
+        layer.cornerRadius                        = 10
         layer.borderWidth                         = 2
         layer.borderColor                         = UIColor.systemGray4.cgColor
         textColor                                 = .label
@@ -30,12 +30,12 @@ class GFPasswordTextField: UITextField {
         textAlignment                             = .center
         font                                      = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontSizeToFitWidth                 = true
-        minimumFontSize                           = 12
+        minimumFontSize                           = 10
         isSecureTextEntry                         = true
         keyboardType                              = .default
         backgroundColor                           = .tertiarySystemBackground
         autocorrectionType                        = .no
-        placeholder                               = "Enter a Password"
+        placeholder                               = "Password"
     
          
     }

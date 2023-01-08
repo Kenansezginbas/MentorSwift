@@ -6,63 +6,91 @@
 //
 
 import UIKit
+import FirebaseAuth
+
 
 class LoginVC: UIViewController {
-    
+    let auth = Auth.auth()
+
     let usernameTextField = GFEmailTextField()
     let passwordTextField = GFPasswordTextField()
-    let textView          = UITextView()
-   
-    override func viewDidLoad() {
+    let signInButton      = GFButton()
+    let goSignUpTextView: UITextView = {
+        let textView                                         = UITextView()
+        textView.text                                        = "Kayıt Ol"
+        textView.textColor                                   = .black
+        textView.backgroundColor                             = .none
+        textView.font                                        = UIFont.preferredFont(forTextStyle: .title1)
+        textView.textAlignment                               = .center
+        textView.translatesAutoresizingMaskIntoConstraints   = false
+        textView.isUserInteractionEnabled                    = true
+        return textView
+    }()
+
+   override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemOrange
         configureUI()
     }
-
-
+    
+     
     private func configureUI() {
-        configureEmailTextField()
-        configurePasswordTextField()
-        configureText()
-    }
-    
-    
-    
-    private func configureText() {
-        textView.text       = "Mentor"
-        textView.textColor  = .white
-        textView.font       = UIFont.preferredFont(forTextStyle: .title1)
-        
-        view.addSubview(textView)
-        
-        NSLayoutConstraint.activate([
-            textView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
-            textView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            textView.heightAnchor.constraint(equalToConstant: 50)
-        ])
-        
-    }
-    
-    
-    private func configureEmailTextField() {
         view.addSubview(usernameTextField)
+        view.addSubview(passwordTextField)
+        view.addSubview(signInButton)
+        view.addSubview(signInButton)
+        
+        
+        //targets
+        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+      
         
         NSLayoutConstraint.activate([
-            usernameTextField.topAnchor.constraint(equalTo: textView.bottomAnchor, constant: 50),
+            //usernameTextField
+            usernameTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
             usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             usernameTextField.heightAnchor.constraint(equalToConstant: 50),
-        ])
-    }
-    
-    private func configurePasswordTextField() {
-        view.addSubview(passwordTextField)
-        
-        NSLayoutConstraint.activate([
+            
+            //passwordTextField
             passwordTextField.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: 20),
             passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 50)
-        
+            passwordTextField.heightAnchor.constraint(equalToConstant: 50),
+            
+            //signInButton
+            signInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            signInButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            signInButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            signInButton.heightAnchor.constraint(equalToConstant: 50),
+            
+            //textView
+            goSignUpTextView.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
+            goSignUpTextView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            goSignUpTextView.heightAnchor.constraint(equalToConstant: 50),
+            goSignUpTextView.widthAnchor.constraint(equalToConstant: 200)
         ])
+    }
+      
+    @objc private func signInButtonTapped() {
+        if usernameTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true {
+            self.present(CustomDialog().showAlert(title: "Hata", message: "Boş Alanları Doldurunuz"), animated: true)
+        } else {
+            auth.signIn(withEmail: usernameTextField.text!, password: passwordTextField.text!) { result, error in
+                if error != nil  {
+                    self.present(CustomDialog().showAlert(title: "Hata", message: error!.localizedDescription), animated: true)
+                } else {
+                    self.goSignUpPage()
+                }
+             }
+        }
+    }
+    
+   
+    @objc private func goSignUpPage() {
+        let signUpVC = SignUpVC()
+        signUpVC.modalPresentationStyle = .fullScreen
+        self.present(signUpVC, animated: true)
     }
 }

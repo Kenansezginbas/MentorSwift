@@ -34,7 +34,7 @@ class GFEmailTextField: UITextField {
         keyboardType                              = .emailAddress
         backgroundColor                           = .tertiarySystemBackground
         autocorrectionType                        = .no
-        placeholder                               = "Enter a Username"
+        placeholder                               = "Email"
     
          
     }
