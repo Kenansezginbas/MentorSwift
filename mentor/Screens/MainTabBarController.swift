@@ -12,9 +12,20 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        configureUI()
     }
     
-    
+    final func configureUI() {
+        let home                            = HomeVC()
+        home.tabBarItem.image               = UIImage(systemName: "house")
+        
+        let questionAnswer                  = QuestionAnswerVC()
+        questionAnswer.tabBarItem.image     = UIImage(systemName: "questionmark.bubble")
+        
+        let menu                            = MenuVC()
+        menu.tabBarItem.image               = UIImage(systemName: "menucard")
+        
+        viewControllers = [home, questionAnswer, menu]
+    }
 
 }
