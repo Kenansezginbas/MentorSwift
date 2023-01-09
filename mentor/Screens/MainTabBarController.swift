@@ -11,11 +11,12 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureUI()
     }
     
     final func configureUI() {
+        view.backgroundColor                = .systemBackground
+        
         let home                            = HomeVC()
         home.tabBarItem.image               = UIImage(systemName: "house")
         
@@ -25,7 +26,7 @@ class MainTabBarController: UITabBarController {
         let menu                            = MenuVC()
         menu.tabBarItem.image               = UIImage(systemName: "menucard")
         
-        viewControllers = [home, questionAnswer, menu]
+        viewControllers                     = [home, questionAnswer, menu]
     }
 
 }
