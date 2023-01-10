@@ -18,6 +18,7 @@ class QuestionAnswerVC: UIViewController {
     
     final func configureUI() {
         view.addSubview(addButton)
+        addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             addButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
@@ -25,6 +26,14 @@ class QuestionAnswerVC: UIViewController {
             addButton.heightAnchor.constraint(equalToConstant: 50),
             addButton.widthAnchor.constraint(equalToConstant: 50)
         ])
+    }
+    
+    
+    @objc func addButtonTapped() {
+        let createQuestion = CreateQuestionVC()
+        createQuestion.modalPresentationStyle = .formSheet
+        self.present(createQuestion, animated: true)
+        
     }
  
 }

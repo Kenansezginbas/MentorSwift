@@ -1,15 +1,17 @@
 //
-//  GFPasswordTextField.swift
+//  GFEmailTextField.swift
 //  mentor
 //
 //  Created by Kenan Sezginbas on 26.12.2022.
-////
+//
 
 
 import UIKit
 
 class GFPasswordTextField: UITextField {
 
+
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -19,6 +21,7 @@ class GFPasswordTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
      
+  
     
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
@@ -31,11 +34,10 @@ class GFPasswordTextField: UITextField {
         font                                      = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontSizeToFitWidth                 = true
         minimumFontSize                           = 10
-        isSecureTextEntry                         = true
         keyboardType                              = .default
         backgroundColor                           = .tertiarySystemBackground
         autocorrectionType                        = .no
-        placeholder                               = "Password"
+        placeholder                               = "Şifre"
     
          
     }

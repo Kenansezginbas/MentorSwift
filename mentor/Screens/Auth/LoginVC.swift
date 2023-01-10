@@ -38,12 +38,12 @@ class LoginVC: UIViewController {
         view.addSubview(usernameTextField)
         view.addSubview(passwordTextField)
         view.addSubview(signInButton)
-        view.addSubview(signInButton)
+        view.addSubview(goSignUpTextView)
         
-        
+             
         //targets
         signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
-        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+        
       
         
         NSLayoutConstraint.activate([
@@ -64,7 +64,7 @@ class LoginVC: UIViewController {
             signInButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             signInButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             signInButton.heightAnchor.constraint(equalToConstant: 50),
-            
+
             //textView
             goSignUpTextView.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
             goSignUpTextView.centerXAnchor.constraint(equalTo: view.centerXAnchor),

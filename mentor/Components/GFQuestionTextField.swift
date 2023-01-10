@@ -1,14 +1,14 @@
 //
-//  GFEmailTextField.swift
+//  GFQuestionTextField.swift
 //  mentor
 //
-//  Created by Kenan Sezginbas on 26.12.2022.
+//  Created by Kenan Sezginbas on 11.01.2023.
 //
-
 
 import UIKit
 
-class GFEmailTextField: UITextField {
+class GFQuestionTextField: UITextField {
+    
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,18 +24,17 @@ class GFEmailTextField: UITextField {
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius                        = 10
-        layer.borderWidth                         = 2
-        layer.borderColor                         = UIColor.systemGray4.cgColor    
+        layer.borderWidth                         = 0
+        layer.borderColor                         = UIColor.systemGray4.cgColor
         textColor                                 = .label
         tintColor                                 = .label
         textAlignment                             = .center
         font                                      = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontSizeToFitWidth                 = true
         minimumFontSize                           = 10
-        keyboardType                              = .emailAddress
+        keyboardType                              = .default
         backgroundColor                           = .tertiarySystemBackground
         autocorrectionType                        = .no
-        placeholder                               = "Email"
-        
+        placeholder                               = "Soru"
     }
 }

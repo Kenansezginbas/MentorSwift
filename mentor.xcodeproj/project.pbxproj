@@ -15,8 +15,11 @@
 		14348A32295A370400B75F89 /* GFEmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14348A31295A370400B75F89 /* GFEmailTextField.swift */; };
 		145016BF2969CB0800FAE165 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145016BE2969CB0800FAE165 /* GFButton.swift */; };
 		145016C12969FFDD00FAE165 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145016C02969FFDD00FAE165 /* SignUpVC.swift */; };
+		14758D3A296E02A400C30A12 /* CreateQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14758D39296E02A400C30A12 /* CreateQuestionVC.swift */; };
+		14758D3C296E098600C30A12 /* GFPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14758D3B296E098600C30A12 /* GFPasswordTextField.swift */; };
+		14758D3E296E0FE200C30A12 /* GFQuestionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14758D3D296E0FE200C30A12 /* GFQuestionTextField.swift */; };
+		14758D40296E151600C30A12 /* GFSaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14758D3F296E151600C30A12 /* GFSaveButton.swift */; };
 		14B6BFB6295CDFDC0026262B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6BFB5295CDFDC0026262B /* MainTabBarController.swift */; };
-		14B6BFB8295CE2D90026262B /* GFPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6BFB7295CE2D90026262B /* GFPasswordTextField.swift */; };
 		14DDEF41296CB448002277C1 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDEF40296CB448002277C1 /* HomeVC.swift */; };
 		14DDEF43296CB463002277C1 /* QuestionAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDEF42296CB463002277C1 /* QuestionAnswerVC.swift */; };
 		14DDEF45296CB47A002277C1 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDEF44296CB47A002277C1 /* MenuVC.swift */; };
@@ -42,8 +45,11 @@
 		14348A31295A370400B75F89 /* GFEmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmailTextField.swift; sourceTree = "<group>"; };
 		145016BE2969CB0800FAE165 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		145016C02969FFDD00FAE165 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		14758D39296E02A400C30A12 /* CreateQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionVC.swift; sourceTree = "<group>"; };
+		14758D3B296E098600C30A12 /* GFPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFPasswordTextField.swift; sourceTree = "<group>"; };
+		14758D3D296E0FE200C30A12 /* GFQuestionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFQuestionTextField.swift; sourceTree = "<group>"; };
+		14758D3F296E151600C30A12 /* GFSaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSaveButton.swift; sourceTree = "<group>"; };
 		14B6BFB5295CDFDC0026262B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		14B6BFB7295CE2D90026262B /* GFPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFPasswordTextField.swift; sourceTree = "<group>"; };
 		14DDEF40296CB448002277C1 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		14DDEF42296CB463002277C1 /* QuestionAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswerVC.swift; sourceTree = "<group>"; };
 		14DDEF44296CB47A002277C1 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
@@ -115,9 +121,11 @@
 			isa = PBXGroup;
 			children = (
 				14348A31295A370400B75F89 /* GFEmailTextField.swift */,
-				14B6BFB7295CE2D90026262B /* GFPasswordTextField.swift */,
 				145016BE2969CB0800FAE165 /* GFButton.swift */,
 				14DDEF46296CB866002277C1 /* GFCircleButton.swift */,
+				14758D3B296E098600C30A12 /* GFPasswordTextField.swift */,
+				14758D3D296E0FE200C30A12 /* GFQuestionTextField.swift */,
+				14758D3F296E151600C30A12 /* GFSaveButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -128,6 +136,7 @@
 				14DDEF48296CBC5F002277C1 /* Menu */,
 				14348A2D295A365B00B75F89 /* Auth */,
 				14B6BFB5295CDFDC0026262B /* MainTabBarController.swift */,
+				14758D39296E02A400C30A12 /* CreateQuestionVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -247,7 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14758D3C296E098600C30A12 /* GFPasswordTextField.swift in Sources */,
 				14348A1A295A35D100B75F89 /* AppDelegate.swift in Sources */,
+				14758D3E296E0FE200C30A12 /* GFQuestionTextField.swift in Sources */,
 				14348A32295A370400B75F89 /* GFEmailTextField.swift in Sources */,
 				14E4F166296B48B800EAA64E /* CustomDialog.swift in Sources */,
 				145016C12969FFDD00FAE165 /* SignUpVC.swift in Sources */,
@@ -257,9 +268,10 @@
 				14DDEF45296CB47A002277C1 /* MenuVC.swift in Sources */,
 				14DDEF43296CB463002277C1 /* QuestionAnswerVC.swift in Sources */,
 				145016BF2969CB0800FAE165 /* GFButton.swift in Sources */,
-				14B6BFB8295CE2D90026262B /* GFPasswordTextField.swift in Sources */,
 				14B6BFB6295CDFDC0026262B /* MainTabBarController.swift in Sources */,
 				14DDEF41296CB448002277C1 /* HomeVC.swift in Sources */,
+				14758D3A296E02A400C30A12 /* CreateQuestionVC.swift in Sources */,
+				14758D40296E151600C30A12 /* GFSaveButton.swift in Sources */,
 				14348A1C295A35D100B75F89 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
