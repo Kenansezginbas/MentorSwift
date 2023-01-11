@@ -19,12 +19,14 @@
 		14758D3C296E098600C30A12 /* GFPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14758D3B296E098600C30A12 /* GFPasswordTextField.swift */; };
 		14758D3E296E0FE200C30A12 /* GFQuestionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14758D3D296E0FE200C30A12 /* GFQuestionTextField.swift */; };
 		14758D40296E151600C30A12 /* GFSaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14758D3F296E151600C30A12 /* GFSaveButton.swift */; };
+		1475B6D8296EF4A600446E48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1475B6D7296EF4A600446E48 /* GoogleService-Info.plist */; };
+		1475B6DA296F1C0500446E48 /* GFAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1475B6D9296F1C0500446E48 /* GFAlertController.swift */; };
+		1475B6DC296F1DFB00446E48 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1475B6DB296F1DFB00446E48 /* DataService.swift */; };
 		14B6BFB6295CDFDC0026262B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6BFB5295CDFDC0026262B /* MainTabBarController.swift */; };
 		14DDEF41296CB448002277C1 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDEF40296CB448002277C1 /* HomeVC.swift */; };
 		14DDEF43296CB463002277C1 /* QuestionAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDEF42296CB463002277C1 /* QuestionAnswerVC.swift */; };
 		14DDEF45296CB47A002277C1 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDEF44296CB47A002277C1 /* MenuVC.swift */; };
 		14DDEF47296CB866002277C1 /* GFCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDEF46296CB866002277C1 /* GFCircleButton.swift */; };
-		14E4F153296B2EC600EAA64E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14E4F152296B2EC600EAA64E /* GoogleService-Info.plist */; };
 		14E4F157296B438300EAA64E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 14E4F156296B438300EAA64E /* FirebaseAuth */; };
 		14E4F159296B438300EAA64E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 14E4F158296B438300EAA64E /* FirebaseDatabase */; };
 		14E4F15B296B438300EAA64E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 14E4F15A296B438300EAA64E /* FirebaseFirestore */; };
@@ -32,6 +34,7 @@
 		14E4F15F296B438300EAA64E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 14E4F15E296B438300EAA64E /* FirebaseStorage */; };
 		14E4F163296B470000EAA64E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4F162296B470000EAA64E /* AuthService.swift */; };
 		14E4F166296B48B800EAA64E /* CustomDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4F165296B48B800EAA64E /* CustomDialog.swift */; };
+		14EE8356296F4EC600576ABB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE8355296F4EC600576ABB /* QuestionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,14 +52,17 @@
 		14758D3B296E098600C30A12 /* GFPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFPasswordTextField.swift; sourceTree = "<group>"; };
 		14758D3D296E0FE200C30A12 /* GFQuestionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFQuestionTextField.swift; sourceTree = "<group>"; };
 		14758D3F296E151600C30A12 /* GFSaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSaveButton.swift; sourceTree = "<group>"; };
+		1475B6D7296EF4A600446E48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1475B6D9296F1C0500446E48 /* GFAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertController.swift; sourceTree = "<group>"; };
+		1475B6DB296F1DFB00446E48 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		14B6BFB5295CDFDC0026262B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		14DDEF40296CB448002277C1 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		14DDEF42296CB463002277C1 /* QuestionAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswerVC.swift; sourceTree = "<group>"; };
 		14DDEF44296CB47A002277C1 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		14DDEF46296CB866002277C1 /* GFCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFCircleButton.swift; sourceTree = "<group>"; };
-		14E4F152296B2EC600EAA64E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		14E4F162296B470000EAA64E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		14E4F165296B48B800EAA64E /* CustomDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDialog.swift; sourceTree = "<group>"; };
+		14EE8355296F4EC600576ABB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		14348A18295A35D100B75F89 /* mentor */ = {
 			isa = PBXGroup;
 			children = (
+				14EE8354296F4E3700576ABB /* Models */,
 				14E4F164296B489500EAA64E /* Utils */,
 				14E4F160296B46DD00EAA64E /* Service */,
 				14B6BFB4295CDFA60026262B /* Screens */,
@@ -103,7 +110,7 @@
 				14348A22295A35D200B75F89 /* Assets.xcassets */,
 				14348A24295A35D200B75F89 /* LaunchScreen.storyboard */,
 				14348A27295A35D200B75F89 /* Info.plist */,
-				14E4F152296B2EC600EAA64E /* GoogleService-Info.plist */,
+				1475B6D7296EF4A600446E48 /* GoogleService-Info.plist */,
 			);
 			path = mentor;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 				14758D3B296E098600C30A12 /* GFPasswordTextField.swift */,
 				14758D3D296E0FE200C30A12 /* GFQuestionTextField.swift */,
 				14758D3F296E151600C30A12 /* GFSaveButton.swift */,
+				1475B6D9296F1C0500446E48 /* GFAlertController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				14E4F162296B470000EAA64E /* AuthService.swift */,
+				1475B6DB296F1DFB00446E48 /* DataService.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -173,6 +182,14 @@
 				14E4F165296B48B800EAA64E /* CustomDialog.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		14EE8354296F4E3700576ABB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14EE8355296F4EC600576ABB /* QuestionModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +262,7 @@
 			files = (
 				14348A26295A35D200B75F89 /* LaunchScreen.storyboard in Resources */,
 				14348A23295A35D200B75F89 /* Assets.xcassets in Resources */,
-				14E4F153296B2EC600EAA64E /* GoogleService-Info.plist in Resources */,
+				1475B6D8296EF4A600446E48 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +279,9 @@
 				14348A32295A370400B75F89 /* GFEmailTextField.swift in Sources */,
 				14E4F166296B48B800EAA64E /* CustomDialog.swift in Sources */,
 				145016C12969FFDD00FAE165 /* SignUpVC.swift in Sources */,
+				1475B6DC296F1DFB00446E48 /* DataService.swift in Sources */,
 				14E4F163296B470000EAA64E /* AuthService.swift in Sources */,
+				1475B6DA296F1C0500446E48 /* GFAlertController.swift in Sources */,
 				14348A2F295A367600B75F89 /* LoginVC.swift in Sources */,
 				14DDEF47296CB866002277C1 /* GFCircleButton.swift in Sources */,
 				14DDEF45296CB47A002277C1 /* MenuVC.swift in Sources */,
@@ -273,6 +292,7 @@
 				14758D3A296E02A400C30A12 /* CreateQuestionVC.swift in Sources */,
 				14758D40296E151600C30A12 /* GFSaveButton.swift in Sources */,
 				14348A1C295A35D100B75F89 /* SceneDelegate.swift in Sources */,
+				14EE8356296F4EC600576ABB /* QuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 import UIKit
 
 class CreateQuestionVC: UIViewController {
-    
+    let dataService       = DataService()
     let questionTextField = GFQuestionTextField()
     let saveButton        = GFSaveButton()
 
@@ -23,6 +23,8 @@ class CreateQuestionVC: UIViewController {
         view.addSubview(questionTextField)
         view.addSubview(saveButton)
         
+        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        
         NSLayoutConstraint.activate([
             questionTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             questionTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -34,6 +36,13 @@ class CreateQuestionVC: UIViewController {
             saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             saveButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+    
+
+    
+    @objc private func saveButtonTapped() {
+        dataService.addQuestion(question: "", type: "", answered: false, answer: "")
+        print("dgfgfd")
     }
 
 }
