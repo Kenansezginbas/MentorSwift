@@ -10,7 +10,7 @@ import UIKit
 
 class GFPasswordTextField: UITextField {
 
-
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,6 +38,8 @@ class GFPasswordTextField: UITextField {
         backgroundColor                           = .tertiarySystemBackground
         autocorrectionType                        = .no
         placeholder                               = "Şifre"
+        isSecureTextEntry                         = true
+        
     
          
     }

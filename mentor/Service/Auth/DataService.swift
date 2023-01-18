@@ -13,9 +13,6 @@ class DataService {
     let db = Firestore.firestore()
     let questionPath = "Questions"
     
-    
-    
-    
     final func addQuestion(question: String, type: String, answered: Bool, answer: String ) {
         db.collection(questionPath).addDocument(data: [
             "Question": question,

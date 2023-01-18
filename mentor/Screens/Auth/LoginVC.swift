@@ -10,41 +10,37 @@ import FirebaseAuth
 
 
 class LoginVC: UIViewController {
-    let auth = Auth.auth()
-
+    let auth = AuthService()
+    
     let usernameTextField = GFEmailTextField()
     let passwordTextField = GFPasswordTextField()
     let signInButton      = GFButton()
-    let goSignUpTextView: UITextView = {
-        let textView                                         = UITextView()
-        textView.text                                        = "Kayıt Ol"
-        textView.textColor                                   = .black
-        textView.backgroundColor                             = .none
-        textView.font                                        = UIFont.preferredFont(forTextStyle: .title1)
-        textView.textAlignment                               = .center
-        textView.translatesAutoresizingMaskIntoConstraints   = false
-        textView.isUserInteractionEnabled                    = true
-        return textView
-    }()
-
-   override func viewDidLoad() {
+    let goSignUpButton    = GFTextButton()
+   
+  
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemOrange
         configureUI()
     }
     
-     
+    
     private func configureUI() {
         view.addSubview(usernameTextField)
         view.addSubview(passwordTextField)
         view.addSubview(signInButton)
-        view.addSubview(goSignUpTextView)
+        view.addSubview(goSignUpButton)
         
-             
+        
         //targets
         signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+        goSignUpButton.addTarget(self, action: #selector(goSignUpPage), for: .touchUpInside)
         
-      
+   
+        
+        
+        
         
         NSLayoutConstraint.activate([
             //usernameTextField
@@ -64,31 +60,41 @@ class LoginVC: UIViewController {
             signInButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             signInButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             signInButton.heightAnchor.constraint(equalToConstant: 50),
-
-            //textView
-            goSignUpTextView.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
-            goSignUpTextView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            goSignUpTextView.heightAnchor.constraint(equalToConstant: 50),
-            goSignUpTextView.widthAnchor.constraint(equalToConstant: 200)
+            
+            //goSignUpButton
+            goSignUpButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
+            goSignUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            goSignUpButton.heightAnchor.constraint(equalToConstant: 50),
+            goSignUpButton.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
-      
+    
     @objc private func signInButtonTapped() {
         if usernameTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true {
             self.present(CustomDialog().showAlert(title: "Hata", message: "Boş Alanları Doldurunuz"), animated: true)
         } else {
-            auth.signIn(withEmail: usernameTextField.text!, password: passwordTextField.text!) { result, error in
-                if error != nil  {
-                    self.present(CustomDialog().showAlert(title: "Hata", message: error!.localizedDescription), animated: true)
-                } else {
-                    self.goSignUpPage()
+            auth.signIn(email: "email@example.com", password: "password") { result, errorMessage in
+                switch result {
+                case .success:
+                    print("Başarılı bir şekilde oturum açıldı")
+                case .error:
+                    if let errorMessage = errorMessage {
+                        print("Error: \(errorMessage)")
+                    }
                 }
-             }
+                
+                if result == AuthResult.success {
+//                    goSignUpPage()
+                } else {
+                    GFAlertController.showAlert(vc : self, title: "Hata", message: "")      }
+                
+            }
         }
+        
+        
+       
     }
-    
-   
-    @objc private func goSignUpPage() {
+  @objc func goSignUpPage() {
         let signUpVC = SignUpVC()
         signUpVC.modalPresentationStyle = .fullScreen
         self.present(signUpVC, animated: true)
