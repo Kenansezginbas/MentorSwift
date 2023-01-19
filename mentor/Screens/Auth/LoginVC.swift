@@ -76,17 +76,14 @@ class LoginVC: UIViewController {
             auth.signIn(email: "email@example.com", password: "password") { result, errorMessage in
                 switch result {
                 case .success:
-                    print("Başarılı bir şekilde oturum açıldı")
+                    self.goSignUpPage()
                 case .error:
                     if let errorMessage = errorMessage {
-                        print("Error: \(errorMessage)")
+                        GFAlertController.showAlert(vc : self, title: "Hata", message: errorMessage)
                     }
                 }
-                
-                if result == AuthResult.success {
-//                    goSignUpPage()
-                } else {
-                    GFAlertController.showAlert(vc : self, title: "Hata", message: "")      }
+
+               
                 
             }
         }

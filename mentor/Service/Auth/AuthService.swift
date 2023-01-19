@@ -12,11 +12,11 @@ case success
 case error
 }
 
-class AuthService {
- 
+class AuthService: BaseAuth {
+   
     let auth = Auth.auth()
-    
-    final func signIn(email: String, password: String, completion: @escaping (AuthResult, String?) -> Void) {
+
+    func signIn(email: String, password: String, completion: @escaping (AuthResult, String?) -> Void) {
             auth.signIn(withEmail: email, password: password) { (result, error) in
                 if error != nil {
                     completion(.error, error?.localizedDescription)

@@ -40,9 +40,14 @@ class CreateQuestionVC: UIViewController {
     
 
     
-    @objc private func saveButtonTapped() {
+    @objc final func saveButtonTapped() {
         dataService.addQuestion(question: "", type: "", answered: false, answer: "")
-        print("dgfgfd")
+        saveQuestion()
+    }
+    
+    final func saveQuestion() {
+        let dataService = DataService()
+        dataService.addQuestion(question: questionTextField.text!, type: "", answered: false, answer: "")
     }
 
 }
