@@ -12,9 +12,9 @@ import FirebaseAuth
 class LoginVC: UIViewController {
     let auth = AuthService()
     
-    let usernameTextField = GFEmailTextField()
-    let passwordTextField = GFPasswordTextField()
-    let signInButton      = GFButton()
+    let usernameTextField = GFTextField(hintText: "username", isSecure: false, kType: .emailAddress)
+    let passwordTextField = GFTextField(hintText: "Şifre", isSecure: true, kType: .default)
+    let signInButton      = GFButton(title: "Giriş Yap", buttonColor: .blue)
     let goSignUpButton    = GFTextButton()
    
   

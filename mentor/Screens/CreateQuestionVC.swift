@@ -9,7 +9,7 @@ import UIKit
 
 class CreateQuestionVC: UIViewController {
     let dataService       = DataService()
-    let questionTextField = GFQuestionTextField()
+    let questionTextField = GFTextField(hintText: "Soru", isSecure: false, kType: .default)
     let saveButton        = GFSaveButton()
 
     override func viewDidLoad() {

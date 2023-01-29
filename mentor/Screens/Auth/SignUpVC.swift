@@ -9,10 +9,10 @@ import UIKit
 
 class SignUpVC: UIViewController {
     
-    let emailTextField         = GFEmailTextField()
-    let passwordTextField      = GFPasswordTextField()
-    let passwordTextFieldCheck = GFPasswordTextField()
-    let signUpButton           = GFButton()
+    let emailTextField         = GFTextField(hintText: "Email", isSecure: false, kType: .emailAddress)
+    let passwordTextField      = GFTextField(hintText: "Şifre", isSecure: true, kType: .default)
+    let passwordTextFieldCheck = GFTextField(hintText: "Şifre (Tekrar)", isSecure: true, kType: .default)
+    let signUpButton           = GFButton(title: "Kayıt Ol", buttonColor: .orange)
     
     override func viewDidLoad() {
         super.viewDidLoad()

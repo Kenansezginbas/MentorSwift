@@ -8,9 +8,13 @@
 import UIKit
 
 class GFButton: UIButton {
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    var title: String!
+    var buttonColor: UIColor!
+    
+    init(title: String, buttonColor: UIColor) {
+        self.title          = title
+        self.buttonColor    = buttonColor
+        super.init(frame: .zero)
         configure()
     }
     
@@ -19,8 +23,8 @@ class GFButton: UIButton {
     }
     
     func configure() {
-        setTitle("Giris Yap", for: .normal)
-        backgroundColor                              = .blue
+        setTitle(title, for: .normal)
+        backgroundColor                              = buttonColor
         titleLabel?.textColor                        = .white
         layer.cornerRadius                           = 12
         translatesAutoresizingMaskIntoConstraints    = false
